@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol Binario</title>
+    <link rel="stylesheet" href="../style/arbo2.css">
+    <link rel="shortcut icon" href="../img/iconC.png" type="image/x-icon">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Almacenamiento tipo árbol binario</h1>
+    <h2>
+        Los árboles binarios son una estructura de datos jerárquica en la que cada nodo puede tener como máximo dos hijos:
+        un hijo izquierdo y un hijo derecho. Esta estructura es extremadamente versátil y se utiliza en muchos campos
+        de la informática, como la manipulación de datos, algoritmos de búsqueda y optimización.
+    </h2>
+
+    <h2>La terminología básica es:</h2>
+    <h2>> Raíz: El nodo superior del árbol</h2>
+    <h2>> Nodo: Cada elemento del árbol</h2>
+    <h2>> Hijo: Un nodo descendiente de otro nodo</h2>
+    <h2>> Hoja: Un nodo que no tiene hijos</h2>
+    <h2>> Padre: El nodo que tiene un nodo hijo</h2>
+
+    <h1>Ejemplo:</h1>
+    <input placeholder="Agregar..." class="input" name="agregar" type="text" />
+    <input placeholder="Eliminar..." class="input" name="eliminar" type="text" />
+    <input placeholder="Buscar..." class="input" name="buscar" type="text" />
+
+   
+    <div id="container" class="arbol"></div>
+
+    
+    
+
+    <script src="../js/arboli2.js"></script>
+
+
+    <h2> El arbol funciona de la siguiente manera: </h2>
+    <h2> Se tiene una clase que recibe el valor y al ser el primero lo coloca al principio del arbol. Cuando se ingresa otro valos este se acomoda a la izquierda o derecha dependiendo de si es mayor o menor al primer número </h2>
+    <h2> El metodo insertar: Se encarga de crear un nuevo nodo, si la raiz está vacia lo coloca ahi sino llama al metodo "insertar nodo para ponerlo en la posición correcta" </h2>
+    <h2> Con el metodo "nuevoNodo" se compara el valor actual, si es menor va a la izquierda y si es mayor a la derecha hasta encontrar la posicion correcta  </h2>
+    <h2> Con el metodo "eliminar" se elimina el valor proporcionado por el usuario (para hacerlo y actualizar el arbol utiliza el metodo "eliminarNodo" </h2>
+    <h2> El metodo "eliminarNodo" utiliza la siguiente logica:  </h2>
+    <h2> >> Si el nodo no tiene hijos se elimina directamente  </h2>
+    <h2> >> Si el nodo tiene un solo hijo se sustituye por ese  </h2>
+    <h2> >> Si el nodo tiene dos su sucesor (en orden) es decir el nodo más pequeño del lado derecho </h2>
+    <h2> El metodo "encontrarSucesor": Se encarga de encontrar un sucesor (en orden) de un nodo. El más pequeño del lado derecho. Recorre el lado derecho hacia abajo para encontrar el valor más bajo a la izquierda </h2>
+    <h2> Con el metodo "buscarNodo": Si el valor está vacio o si es igual devuelve el valor. Si es valor es menor busca del lado izquierdo sino se va al derecho  </h2>
+    <h2> El metodo "preorden": Sirve para recorrer el arbol y organizar el nodo por niveles. Recorre el arbol en orden hacia abajo (incluyendo la raiz, lado izquierdo y derecho) después agrupa los valores por niveles con el arreglo "resultado" </h2>
+    <h2> El metodo "mostrar": Usando el metodo "preorden" recorre el arbol y organiza los nodos por niveles para tener de resultado una matriz donde cada subarreglo representa un nivel. 
+        Usando un "container" de la pagina HTML va mostrando los valores ingresados, además usando las clases "div" hace posible esta division (además de agregar un color especifico para cada nivel) </h2>
+</body>
+
+<nav class="container-nav"> 
+    <a href="../index.html"> 
+        <button a = "link-nav"> Volver </button>
+    </a>
+</html>
